@@ -67,16 +67,16 @@ app.get('/' , (req, res) => {
 }) ;
 
 
-app.post('/ans' , (req,res)=> {
-    const array= req.body.array ; 
-    // console.log(array) ;    
+// app.post('/ans' , (req,res)=> {
+//     const array= req.body.array ; 
+//     // console.log(array) ;    
 
-    if( suduko_solver(array)){
-        // console.log("error") ;
-        res.send(array) ;
-    } 
+//     if( suduko_solver(array)){
+//         // console.log("error") ;
+//         res.send(array) ;
+//     } 
  
-})
+// })
 
 
 
