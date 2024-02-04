@@ -1,7 +1,7 @@
 const express = require('express');
 // const cp = require('cookie-parser');
 // const cors = require('cors');
-// const dy = require('body-parser');
+const dy = require('body-parser');
 const app = express();
 const PORT = 800 // process.env.PORT || ;
 
@@ -14,8 +14,8 @@ const PORT = 800 // process.env.PORT || ;
 //         methods: ["POST", "GET"],
 //         credentials: true
 //     }));
-// app.use(dy.json());
-// app.use(dy.urlencoded({ extended: true })); 
+app.use(dy.json());
+app.use(dy.urlencoded({ extended: true })); 
 
 
 function is_safe( r , c , oard , v ) {
