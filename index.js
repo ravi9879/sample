@@ -72,8 +72,21 @@ app.get('/' , (req, res) => {
 }) ;
 
 
-app.post('/ans' , (req,res)=> {
-    const array= req.body.array ; 
+// app.post('/ans' , (req,res)=> {
+//     const array= req.body.array ; 
+//     // console.log(array) ;    
+
+//     if( suduko_solver(array)){
+//         // console.log("error") ;
+//         res.send(array) ;
+//     } 
+ 
+// })
+
+
+
+app.get('/ans' , (req,res)=> {
+    const array= [[0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0]];
     // console.log(array) ;    
 
     if( suduko_solver(array)){
@@ -82,9 +95,6 @@ app.post('/ans' , (req,res)=> {
     } 
  
 })
-
-
-
 
 app.listen(PORT, () => {
     console.log('app started successsfuly');
